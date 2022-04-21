@@ -1,0 +1,111 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+    "height": "230",
+    "width": "336",
+    "hideSelection": true,
+    "formatter": {
+      "elmType": "div",
+      "style": {
+        "display": "flex",
+        "align-items": "stretch",
+        "margin-bottom": "16px",
+        "min-width": "150px",
+        "flex-grow": "1",
+        "justify-content": "space-around",
+        "padding": "5px"
+      },
+      "children": [
+        {
+          "elmType": "div",
+          "style": {
+            "width": "95%",
+            "height": "92%",
+            "box-shadow": "0px 1.6px 3.6px 0 #00000024, 0px 0.3px 0.9px 0 #00000024",
+            "overflow": "hidden",
+            "border-radius": "2px",
+            "padding-left": "16px",
+            "border-top": "2px solid #003EA9",
+            "padding-top": "20px"
+          },
+          "attributes": {
+            "class": "ms-bgColor-neutralLighterAlt"
+          },
+          "children": [
+            {
+              "elmType": "div",
+              "defaultHoverField": "[$User]",
+              "attributes": {
+                  "class": "sp-card-container"
+              },
+              "style": {
+                "text-align": "center"
+              },
+              "children": [
+                {
+                    "elmType": "div",
+                    "attributes": {
+                      "class": "sp-card-userContainer"
+                    },
+                    "style": {
+                        "display": "inline-block",
+                        "width": "80px",
+                        "height": "80px",
+                        "border": "2px solid #F4CA12"
+                    },
+                    "children": [
+                      {
+                        "elmType": "img",
+                        "defaultHoverField": "[$User]",
+                        "attributes": {
+                          "src": "=getUserImage([$User.email], 'L')",
+                          "title": "[$User.title]",
+                          "class": "sp-card-userThumbnail"
+                        },
+                        "style": {}
+                      }
+                    ]
+                },
+                {
+                  "elmType": "div",
+                  "style": {
+                    "color":"#003EA9",
+                    "font-size": "16px",
+                    "font-weight": "600"
+                },
+                  "attributes": {
+                    "class": "sp-row-listPadding"
+                  },
+                  "txtContent": "[$User.title]"
+                },
+                {
+                    "elmType": "div",
+                    "style": {
+                      "color":"#5C5C5C",
+                      "font-size": "14px",
+                      "font-weight": "500"
+                  },
+                    "attributes": {
+                      "class": "sp-row-listPadding"
+                    },
+                    "txtContent": "=if([$User.jobTitle] == '', '-', [$User.jobTitle])"
+                },
+                {
+                  "elmType": "div",
+                  "style": {
+                    "color":"#FA9B00",
+                    "font-size": "14px",
+                    "font-weight": "600"
+                },
+                  "attributes": {
+                    "class": "sp-row-listPadding"
+                  },
+                  "txtContent": "='Started on ' + if(getMonth([$StartDate])==0,'Jan',if(getMonth([$StartDate])==1,'Feb',if(getMonth([$StartDate])==2,'Mar',if(getMonth([$StartDate])==3,'Apr',if(getMonth([$StartDate])==4,'May',if(getMonth([$StartDate])==5,'Jun',if(getMonth([$StartDate])==6,'Jul',if(getMonth([$StartDate])==7,'Aug',if(getMonth([$StartDate])==8,'Sept',if(getMonth([$StartDate])==9,'Oct',if(getMonth([$StartDate])==10,'Nov','Dec'))))))))))) + ' ' + getDate([$StartDate])"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  
+  }
