@@ -3,3 +3,17 @@
 https://web.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/
 
 https://apps.powerapps.com/play/[AppID]?source=iframe
+
+Step 1: Access the Discussion Board App in the SharePoint Online> Copy the URL in the Address box> Paste it in the Word document.
+
+Step 2: Click on the List tab> List Settings> Copy the List ID in the address box. (ID part in the URL will start after List=)> Paste the List ID in the Word document.
+
+Step 3: Now replace the Discussion Board App URL and List ID in the following embed code:
+
+<iframe src="Discussion Board URL?List ={List ID}&amp;action=embedview&amp;wdStartOn=1" width="476px" height="288px" frameborder="0"> </iframe>
+
+ 
+
+Note: After replacing it will look like: <iframe src="https://qi****u.sharepoint.com/sites/Newtestsite/Lists/Discussion/AllItems.aspx?List ={%7B0****4E-6DF4-4CB8-95D4-3E43546E9B47%7D }&amp;action=embedview&amp;wdStartOn=1" width="476px" height="288px" frameborder="0"> </iframe>
+
+Step 4: Go to the SharePoint page> Edit> Click +> Embed webpart> Add the code in the Embed webpart> Publish the page.
