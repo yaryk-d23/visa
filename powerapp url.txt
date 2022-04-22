@@ -1,3 +1,5 @@
 <iframe width="98%" height="98%" src="https://web.powerapps.com/webplayer/iframeapp?hideNavBar=true&amp;screenColor=rgba%28165%2c55%2c1%29&amp;appId=/providers/Microsoft.PowerApps/apps/9ebee062-f17f-4cbe-876f-c67ccde6af8d"/>
 
 https://web.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/
+
+https://apps.powerapps.com/play/[AppID]?source=iframe
